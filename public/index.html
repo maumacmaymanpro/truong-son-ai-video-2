@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071923"><title>TRƯỜNG SƠN AI VIDEO 2.0</title>
+<style>
+:root{--bg:#071923;--card:#0e2631;--card2:#0a202a;--text:#f3fbfb;--muted:#9db5bc;--line:#2b5360;--a:#19d3a2;--b:#1f9bff;--danger:#ff6b6b;--warn:#ffd166}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(160deg,#06151d,#0a2630 48%,#071923);color:var(--text)}
+main{max-width:980px;margin:auto;padding:18px 14px 48px}.brand{display:flex;gap:12px;align-items:center;margin-bottom:18px}.logo{width:50px;height:50px;border-radius:16px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font-size:24px;box-shadow:0 12px 30px #0005}.brand h1{font-size:21px;margin:0}.brand p{font-size:12px;color:var(--muted);margin:4px 0 0}.step{font-size:12px;color:#75e7cd;font-weight:900;letter-spacing:.04em;margin:18px 0 8px}.card{background:#0e2631eb;border:1px solid var(--line);border-radius:18px;padding:15px;box-shadow:0 15px 40px #0002}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.option{border:1px solid #2e5965;border-radius:13px;padding:12px;background:#0a222c;cursor:pointer}.option.selected{border:2px solid var(--a);background:#103b3b}.option b{display:block;font-size:14px}.option small{display:block;margin-top:4px;color:var(--muted);line-height:1.35}.btn{border:0;border-radius:12px;padding:12px 15px;font-weight:900;color:#fff;background:var(--b);cursor:pointer;font-size:14px}.btn.green{background:linear-gradient(135deg,#10bd92,#18a9d9)}.btn.secondary{background:#173845;border:1px solid #31606c}.btn.danger{background:#4d2026;border:1px solid #7f3b45}.btn:disabled{opacity:.45;cursor:not-allowed}.row{display:flex;gap:9px;flex-wrap:wrap}.row>*{flex:1;min-width:180px}.field{margin-top:10px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;background:#081d26;color:var(--text);border:1px solid #2b5260;border-radius:11px;padding:10px;font:inherit}.check{font-size:13px;color:#d8e7e9}.note,small{color:var(--muted);font-size:12px}.progress{height:10px;background:#092029;border-radius:10px;overflow:hidden;margin:12px 0}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b));transition:.2s}.hide{display:none!important}.statusLine{display:flex;justify-content:space-between;gap:10px;align-items:center}.statusPill{padding:5px 8px;border-radius:999px;background:#15343d;color:#8fe6d2;font-size:11px;font-weight:800}.video{background:#000;border-radius:15px;overflow:hidden;aspect-ratio:9/16;max-height:620px}.video video{width:100%;height:100%;object-fit:contain}.segment{border:1px solid #294c58;border-radius:13px;background:#0a202a;padding:10px;margin-top:8px}.segmentHead{display:flex;gap:10px;align-items:flex-start}.segmentHead .time{font-size:11px;color:#78ced3;min-width:82px}.segmentHead .text{flex:1}.segment input[type=checkbox]{accent-color:var(--a)}.section{border:1px solid #315865;border-radius:16px;padding:12px;margin-top:10px;background:linear-gradient(180deg,#0c2530,#0a202a)}.section h3{margin:0;font-size:16px}.section .reason{margin-top:5px;color:#91abb3;font-size:12px}.sectionGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}.tag{display:inline-block;font-size:10px;padding:4px 7px;border:1px solid #3a626e;border-radius:999px;color:#9fc4cb}.download{font-size:18px;padding:15px 18px}.footer{text-align:center;color:#68858c;font-size:11px;margin-top:22px}.mini{font-size:11px;color:#82a1aa}.slider{display:grid;grid-template-columns:110px 1fr 60px;gap:8px;align-items:center}.range{width:100%}@media(max-width:760px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.sectionGrid{grid-template-columns:1fr}.row>*{min-width:140px}}
+</style>
+</head>
+<body><main>
+<header class="brand"><div class="logo">🎬</div><div><h1>TRƯỜNG SƠN AI VIDEO 2.0</h1><p>AI nghe → hiểu → chọn đoạn → hook từng phần → phụ đề → background → render MP4 → tải về</p></div></header>
+
+<div class="step">01 · TẢI VIDEO & CHỌN Ý ĐỊNH</div>
+<section class="card">
+  <div class="row"><div class="field" style="flex:1"><label>🎥 Video nguồn</label><input id="file" type="file" accept="video/*"></div><div class="field" style="flex:1"><label>🎯 Chủ đề / thông điệp chính</label><input id="topic" placeholder="Ví dụ: 3 điều cần biết trước khi mua sim phong thủy"></div></div>
+  <div class="field"><label>🎞️ Phong cách dựng</label><div class="grid4" id="styleGrid"><div class="option selected" data-style="natural"><b>🌿 Tự nhiên</b><small>Thân thiện, sạch</small></div><div class="option" data-style="expert"><b>🎓 Chuyên gia</b><small>Rõ ràng, tin cậy</small></div><div class="option" data-style="viral"><b>🔥 Viral</b><small>Nhanh, nhấn mạnh</small></div><div class="option" data-style="luxury"><b>✨ Sang trọng</b><small>Điện ảnh, tinh tế</small></div></div></div>
+  <div class="field"><label>⏱️ Mục tiêu độ dài</label><div class="grid4" id="durationGrid"><div class="option selected" data-sec="90"><b>60–90s</b><small>Video ngắn</small></div><div class="option" data-sec="120"><b>90–120s</b><small>Chia sẻ vừa</small></div><div class="option" data-sec="180"><b>2–3 phút</b><small>Chuyên sâu</small></div><div class="option" data-sec="0"><b>🤖 AI tự chọn</b><small>Theo nội dung</small></div></div></div>
+  <div class="row" style="margin-top:12px"><button id="start" class="btn green" disabled>🧠 AI nghe & phân tích video</button><button id="reset" class="btn secondary">↻ Làm lại</button></div>
+  <div id="uploadStatus" class="note" style="margin-top:10px"></div>
+</section>
+
+<div class="step">02 · AI PHÂN TÍCH & CHO ANH DUYỆT</div>
+<section id="analysisCard" class="card hide">
+  <div class="statusLine"><strong id="phase">Đang chuẩn bị...</strong><span id="pill" class="statusPill">0%</span></div>
+  <div class="progress"><div id="bar" class="bar"></div></div>
+  <div id="analysisNote" class="note"></div>
+  <div id="analysisBody" class="hide">
+    <div class="field"><label>📝 Transcript đầy đủ</label><textarea id="transcript" rows="6"></textarea></div>
+    <div class="field"><label>🎯 Tiêu đề AI đề xuất</label><input id="title"></div>
+    <div class="field"><label>📌 Caption AI đề xuất</label><textarea id="caption" rows="3"></textarea></div>
+    <div class="field"><label>🧩 Các section AI đề xuất — anh có thể sửa hook và bật/tắt từng đoạn</label><div id="sections"></div></div>
+  </div>
+</section>
+
+<div class="step">03 · PHỤ ĐỀ & BACKGROUND</div>
+<section id="editCard" class="card hide">
+  <div class="grid4">
+    <div class="field"><label>Font</label><select id="font"><option>Arial</option><option>Roboto</option><option>DejaVu Sans</option><option>Montserrat</option></select></div>
+    <div class="field"><label>Kích cỡ</label><input id="fontSize" type="number" value="52" min="24" max="96"></div>
+    <div class="field"><label>Màu chữ</label><input id="color" type="color" value="#FFFFFF"></div>
+    <div class="field"><label>Màu viền</label><input id="outlineColor" type="color" value="#06131A"></div>
+  </div>
+  <div class="grid4">
+    <div class="field"><label>Độ dày viền</label><input id="outlineWidth" type="number" value="3" min="0" max="8"></div>
+    <div class="field"><label>Vị trí</label><select id="position"><option value="bottom">Dưới</option><option value="center">Giữa</option><option value="top">Trên</option></select></div>
+    <div class="field"><label>Background</label><select id="bgMode"><option value="ai">🤖 AI tạo theo bối cảnh</option><option value="gradient">🎨 Nền điện ảnh</option><option value="none">⚪ Nền tối giản</option></select></div>
+    <div class="field"><label>Giữ giọng nói</label><select id="voice"><option value="yes">Có — giữ nguyên</option><option value="yes">Có — ưu tiên</option></select></div>
+  </div>
+  <div class="note" style="margin-top:10px">AI background được dùng làm nền điện ảnh phía sau video và thẻ hook của từng section. Nếu máy chủ không có quyền tạo ảnh AI, app tự rơi về nền gradient.</div>
+  <div class="row" style="margin-top:12px"><button id="render" class="btn green">🚀 Duyệt xong & xuất MP4</button></div>
+</section>
+
+<div class="step">04 · RENDER TRÊN MÁY CHỦ</div>
+<section id="renderCard" class="card hide">
+  <div class="statusLine"><strong id="renderPhase">Chưa bắt đầu</strong><span id="renderPill" class="statusPill">0%</span></div>
+  <div class="progress"><div id="renderBar" class="bar"></div></div>
+  <div id="renderNote" class="note">Sau khi upload, anh có thể tắt màn hình. Máy chủ tiếp tục xử lý job.</div>
+</section>
+
+<div class="step">05 · KẾT QUẢ</div>
+<section id="resultCard" class="card hide">
+  <div class="statusLine"><strong>🎉 Video đã hoàn thành</strong><span class="statusPill">MP4</span></div>
+  <div class="note" id="resultInfo" style="margin:7px 0 10px"></div>
+  <div class="video"><video id="out" controls playsinline></video></div>
+  <div class="row" style="margin-top:12px"><a id="download" class="btn green download" href="#">⬇️ TẢI VIDEO VỀ MÁY</a><a id="open" class="btn secondary" href="#" target="_blank" rel="noopener">▶ Mở video</a></div>
+  <div class="note" style="margin-top:9px">Đây là đường dẫn tải MP4 từ máy chủ, không dùng Blob trong bộ nhớ điện thoại.</div>
+</section>
+
+<div class="footer">Trường Sơn AI Video 2.0 · AI nghe · AI hiểu · AI dựng · MP4 server-side</div>
+</main>
+<script src="config.js"></script>
+<script>
+const API=(window.TS_AI_API_BASE||'').replace(/\/$/,'');let file=null,job=null,style='natural',target=90,poll=null;
+const $=id=>document.getElementById(id);const api=p=>API+p;
+function pickOption(group, attr, cb){document.querySelectorAll(group).forEach(el=>el.addEventListener('click',()=>{document.querySelectorAll(group).forEach(x=>x.classList.remove('selected'));el.classList.add('selected');cb(el.getAttribute(attr));}));}
+pickOption('#styleGrid .option','data-style',v=>style=v);pickOption('#durationGrid .option','data-sec',v=>target=Number(v));
+$('file').addEventListener('change',e=>{file=e.target.files[0]||null;$('start').disabled=!file;$('uploadStatus').textContent=file?`Đã chọn: ${file.name} · ${(file.size/1048576).toFixed(1)} MB`:''});
+$('reset').onclick=()=>location.reload();
+function setProgress(card,bar,pill,phase,progress,note){$(card).classList.remove('hide');$(bar).style.width=progress+'%';$(pill).textContent=progress+'%';$(phase).textContent=phase||'';$(note).textContent=note||''}
+$('start').onclick=async()=>{
+ if(!file)return;
+ $('start').disabled=true;$('uploadStatus').textContent='Đang upload video lên máy chủ...';$('analysisCard').classList.remove('hide');
+ const fd=new FormData();fd.append('video',file);fd.append('topic',$('topic').value);fd.append('style',style);fd.append('target',target);
+ try{const r=await fetch(api('/api/jobs'),{method:'POST',body:fd});const data=await r.json();if(!r.ok)throw new Error(data.error||'Upload lỗi');job=data;pollJob('analysis');}catch(e){$('uploadStatus').textContent='❌ '+e.message;$('start').disabled=false;}
+};
+async function pollJob(mode){clearInterval(poll);const tick=async()=>{try{const r=await fetch(api('/api/jobs/'+job.id));const d=await r.json();job=d;if(mode==='analysis'){
+   setProgress('analysisCard','bar','pill',d.phase,d.progress,d.error||'Máy chủ đang nghe, hiểu và biên tập nội dung…');
+   if(d.status==='analysis_ready'){clearInterval(poll);$('analysisBody').classList.remove('hide');renderAnalysis(d);$('editCard').classList.remove('hide');$('uploadStatus').textContent='✅ AI đã phân tích xong. Anh kiểm tra và chỉnh trước khi render.';}
+   if(d.status==='error'){clearInterval(poll);alert(d.error||'Phân tích lỗi.');$('start').disabled=false;}
+ }else{
+   setProgress('renderCard','renderBar','renderPill',d.phase,d.progress,d.error||'Server đang dựng video. Anh có thể tắt màn hình điện thoại.');
+   if(d.status==='completed'){clearInterval(poll);showResult(d);}
+   if(d.status==='error'){clearInterval(poll);alert(d.error||'Render lỗi.');$('render').disabled=false;}
+ }}catch(e){console.warn(e)} };await tick();poll=setInterval(tick,2500)}
+function esc(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function renderAnalysis(d){$('transcript').value=d.transcript?.text||'';$('title').value=d.title||'';$('caption').value=d.caption||'';const root=$('sections');root.innerHTML='';(d.sections||[]).forEach((s,si)=>{
+ const sec=document.createElement('div');sec.className='section';sec.dataset.si=si;sec.innerHTML=`<div class="row"><div style="flex:1"><span class="tag">SECTION ${si+1}</span><h3>${esc(s.title||'Section')}</h3><div class="reason">${esc(s.reason||'')}</div></div><div style="flex:1"><div class="field"><label>🪝 Hook riêng cho đoạn này</label><input class="hookInput" value="${esc(s.hook||'')}" maxlength="120"></div><div class="field"><label>🎨 Prompt background</label><input class="bgPrompt" value="${esc(s.backgroundPrompt||'')}" maxlength="300"></div></div></div><div class="field"><label>Đoạn nội dung</label><div class="segmentList"></div></div>`;
+ const list=sec.querySelector('.segmentList');const ids=new Set((s.keepIds||[]).map(Number));(d.blocks||[]).filter(b=>ids.has(Number(b.id))).forEach(b=>{list.appendChild(segmentEl(b,true));});
+ root.appendChild(sec);
+ });
+ const omitted=(d.blocks||[]).filter(b=>!(d.sections||[]).some(s=>(s.keepIds||[]).map(Number).includes(Number(b.id))));
+ if(omitted.length){const sec=document.createElement('div');sec.className='section';sec.dataset.extra='omitted';sec.innerHTML='<span class="tag">AI BỎ</span><h3 style="margin-top:6px">Đoạn AI đề xuất bỏ</h3><div class="reason">Anh có thể bật lại nếu thấy AI cắt quá tay.</div><div class="segmentList"></div>';const list=sec.querySelector('.segmentList');omitted.forEach(b=>list.appendChild(segmentEl(b,false)));root.appendChild(sec)}
+}
+function segmentEl(b,checked){const wrap=document.createElement('div');wrap.className='segment';wrap.dataset.id=b.id;wrap.innerHTML=`<div class="segmentHead"><label><input class="keep" type="checkbox" ${checked?'checked':''}></label><div class="time">${fmt(b.start)}–${fmt(b.end)}</div><div class="text"><input class="subText" value="${esc(b.text)}"></div></div>`;return wrap}
+function fmt(s){s=Number(s||0);const m=Math.floor(s/60),x=(s%60).toFixed(1);return `${String(m).padStart(2,'0')}:${String(x).padStart(4,'0')}`}
+$('render').onclick=async()=>{if(!job){alert('Chưa có job');return}const blocks=[];document.querySelectorAll('.segment').forEach(el=>{blocks.push({id:Number(el.dataset.id),keep:el.querySelector('.keep').checked,text:el.querySelector('.subText').value})});const sections=[];document.querySelectorAll('#sections .section').forEach(sec=>{if(sec.dataset.extra==='omitted'){const keepIds=[...sec.querySelectorAll('.segment')].filter(x=>x.querySelector('.keep').checked).map(x=>Number(x.dataset.id));if(keepIds.length)sections.push({title:'Đoạn bổ sung',hook:'Một ý quan trọng đáng để xem tiếp.',backgroundPrompt:'cinematic premium contextual background, vertical 9:16, no text, no logos',keepIds,reason:'Các đoạn anh bật lại thủ công.'});return;}const idx=Number(sec.dataset.si);const base=job.sections[idx];const keepIds=[...sec.querySelectorAll('.segment')].filter(x=>x.querySelector('.keep').checked).map(x=>Number(x.dataset.id));sections.push({title:base.title,hook:sec.querySelector('.hookInput').value,bgPrompt:sec.querySelector('.bgPrompt').value,backgroundPrompt:sec.querySelector('.bgPrompt').value,keepIds,reason:base.reason});});
+ const plan={title:$('title').value,caption:$('caption').value,sections,blocks,backgroundMode:$('bgMode').value,subtitle:{fontFamily:$('font').value,fontSize:Number($('fontSize').value),color:$('color').value,outlineColor:$('outlineColor').value,outlineWidth:Number($('outlineWidth').value),position:$('position').value},target};$('render').disabled=true;$('renderCard').classList.remove('hide');$('renderNote').textContent='Đã gửi lệnh render. Anh có thể tắt màn hình điện thoại.';
+ try{const r=await fetch(api('/api/jobs/'+job.id+'/render'),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({plan})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Không bắt đầu render');pollJob('render');}catch(e){alert(e.message);$('render').disabled=false;}}
+function showResult(d){$('resultCard').classList.remove('hide');$('resultInfo').textContent=`Video gốc khoảng ${Math.round(d.duration||0)} giây · máy chủ đã hoàn thành render.`;$('out').src=api(d.previewUrl);$('download').href=api(d.downloadUrl);$('download').download=`${(d.name||'Truong-Son-AI-Video').replace(/\.[^.]+$/,'')}-Truong-Son-AI.mp4`;$('open').href=api(d.downloadUrl);$('resultCard').scrollIntoView({behavior:'smooth'});}
+</script>
+</body></html>
